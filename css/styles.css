@@ -17,3 +17,63 @@ ul {
 .menu-item:hover .menu-item {
   opacity: 1;
 } 
+body {
+  background-color: rgb(214, 217, 218);
+}
+button {
+  border: 0;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px 0px 50px;
+  width: 300px;
+  height: 300px;
+}
+.btn {
+  position: relative;
+  display: inline-flex;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  background-color: rgb(0, 162, 255);
+  color: #fff;
+  border-radius: 6px;
+  transition: background-color 250ms linear;
+  border: 2px solid rgb(0, 162, 255);
+  overflow: hidden;
+}
+.btn::before,
+.btn::after {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: transform 250ms linear;
+}
+.btn::after {
+  content: '';
+  background-color: #fff;
+  margin-left: 5px;
+}
+.btn::before {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  content: '';
+  background-color: rgb(0, 162, 255);
+  transform: translateY(calc(-50% + 50px));
+}
+.btn:hover::before {
+  transform: translateY(-50%);
+}
+.btn:hover::after {
+  transform: translateY(-50px);
+}
+.btn:hover {
+  background-color: #fff;
+  color: rgb(0, 162, 255);
+}
