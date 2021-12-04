@@ -1,4 +1,4 @@
-ul {
+/* ul {
   padding: 0;
   list-style: none;
 }
@@ -76,4 +76,29 @@ button {
 .btn:hover {
   background-color: #fff;
   color: rgb(0, 162, 255);
+} */
+
+
+
+
+ul {
+  padding: 0;
+  list-style: none;
 }
+
+.menu > .menu-item {
+  display: inline-block;
+  vertical-align: top;
+  opacity: 1;
+}
+
+.sub-menu .sub-menu-item,
+.pod-menu .pod-menu-item  {
+  opacity: 0;
+  margin-left: 100px;
+}
+
+.menu-item:hover .sub-menu-item,
+.sub-menu:hover .pod-menu-item {
+  opacity: 1;
+} 
